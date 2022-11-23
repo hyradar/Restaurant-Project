@@ -135,7 +135,6 @@ ul {
   border: none;
 }
 
-/* Adjust so that it stays black when clicked */
 .mobilemenubutton:hover {
   cursor: pointer;
 }
@@ -261,7 +260,6 @@ svg {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* width: 100%; */
 }
 
 .infobox {
@@ -497,7 +495,7 @@ figure {
   flex-direction: column;
   justify-content: center;
   margin: 1em 0 0 0;
-  width: min(90%, 40rem);
+  width: min(90%, 70rem);
   gap: .2rem;
 }
 
@@ -590,8 +588,6 @@ textarea {
   .categorydiv {
     height: clamp(2rem, 3vw + 3rem, 7rem);
   }
-
-  
 }
 
 @media (min-width: 700px) {

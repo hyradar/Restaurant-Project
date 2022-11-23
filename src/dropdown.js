@@ -28,13 +28,6 @@ document.addEventListener('click', e => {
         currentDropDown = document.querySelector('.dropdown');
         currentDropDown.classList.toggle('active');
         let x = document.querySelector('.centerbottomblue');
-        if (x) {
-            if (x.style.color != 'white') {
-                x.style.color = 'white';
-            } else {
-                x.style.color = 'rgb(0, 166, 255)'
-            }
-        }   
     }
 });
 

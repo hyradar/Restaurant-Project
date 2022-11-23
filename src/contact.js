@@ -134,8 +134,9 @@ export function generateContactPage() {
     //Appending sections to Contact Page
     contactPageDiv.append(infoDiv, contactForm, mapDiv);
         content.appendChild(contactPageDiv);
+    
     //Initializing Google Maps API
-        initMap();    
+    initMap();    
 }
 
 function initMap() {
@@ -154,3 +155,5 @@ function initMap() {
       map: map,
     });
   }
+
+  

@@ -169,6 +169,43 @@ export function generateMobile() {
         let arrowImage = document.createElement('img');
         arrowImage.src = mobileArrow;
         arrowImage.addEventListener('click', removeDropDown);
+
+        switch (firstAnchor.id) {            
+            case 'Homebutton': 
+                arrowImage.addEventListener('click', () => {
+                    clearContentDiv();
+                    removeDropDown();
+                    generateHomePage();
+                    // setCurrentPage(homeButton);
+                    });
+                break;
+
+            case 'Menubutton':
+                arrowImage.addEventListener('click', () => {
+                    removeDropDown();
+                    clearContentDiv();
+                    filterArray.resetFilters();
+                    updateMenuWithFilters(entreesMenu, filterArray);
+                    updateMenuWithFilters(seafoodMenu, filterArray);
+                    updateMenuWithFilters(mainsMenu, filterArray);
+                    updateMenuWithFilters(saladsMenu, filterArray);
+                    updateMenuWithFilters(dessertsMenu, filterArray);
+                    // setCurrentPage(menuButton);
+                    generateMenu();
+                    let category = getCurrentCategory();
+                    generateMenuItems(category);
+                });
+                break;
+
+            case 'Contactbutton':
+                arrowImage.addEventListener('click', () => {
+                    removeDropDown();
+                    clearContentDiv();
+                    // setCurrentPage(contactButton);
+                    generateContactPage();
+                });
+                break;
+        }
     
         dropDownItem.append(firstAnchor, secondAnchor);
         secondAnchor.append(arrowImage);
@@ -216,7 +253,6 @@ export function addButtonEventListeners() {
     if (contactButton) {
         contactButton.addEventListener('click', () => {
             clearContentDiv();
-            filterArray.resetFilters();
             setCurrentPage(contactButton);
             generateContactPage();
         });
@@ -246,7 +282,7 @@ export function setCurrentPage(button) {
         });
     }
 
-    //Sets currentpage to gold/accent color
+    // Sets currentpage to gold/accent color
         cPage.currentPage = button;
         cPage.currentPage.style.color = 'var(--clr-accent-1)';
 }
