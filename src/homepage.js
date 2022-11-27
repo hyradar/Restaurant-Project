@@ -1,4 +1,3 @@
-import {setAttributes} from './view.js';
 
 export function generateHomePage() {
     
@@ -9,17 +8,26 @@ export function generateHomePage() {
     
     let centerTop = document.createElement('h1');
     centerTop.className = 'centertop';
-    centerTop.innerHTML = 'Explore and Discover'
+    
     
     let centerBottomDiv = document.createElement('div');
     let centerBottomText = document.createElement('h2');
     let centerBottomBlue = document.createElement('h2');
 
+    if (window.innerWidth >= 700) {
+        centerTop.innerHTML = 'Explore and Discover'
+        centerBottomText.innerHTML = 'The Seafra Seafood Collection';
+        centerBottomBlue.innerHTML = 'The Seafra Seafood Collection';
+    }
+    else {
+        centerTop.innerHTML = 'Discover'
+        centerBottomText.innerHTML = 'Seafra Seafood';
+        centerBottomBlue.innerHTML = 'Seafra Seafood';
+    }
+
     centerBottomDiv.className = 'centerbottomdiv';
     centerBottomText.className = 'centerbottomtext';
-    centerBottomText.innerHTML = 'The Seafra Seafood Collection';
     centerBottomBlue.className = 'centerbottomblue';
-    centerBottomBlue.innerHTML = 'The Seafra Seafood Collection';
     
     centerBottomDiv.appendChild(centerBottomText);
     centerBottomDiv.appendChild(centerBottomBlue);

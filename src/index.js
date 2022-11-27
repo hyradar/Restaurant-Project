@@ -38,16 +38,32 @@ function siteStart() {
 }
 
 //Why does Min need e.matches?
+//Extra code changes Homepage Centerbox text content 
 function handleMediaQueryMin (e){
     if (e.matches) {
+        
         generateDesktop();
         addButtonEventListeners();
         changeBanner(); 
         setCurrentPage(cPage.currentPage);
+        let x = document.querySelector('.centerbox');
+        if (x) {
+            document.querySelector('.centertop').innerHTML = 'Explore and Discover';
+            document.querySelector('.centerbottomtext').innerHTML = 'The Seafra Seafood Collection';
+            document.querySelector('.centerbottomblue').innerHTML = 'The Seafra Seafood Collection';
+        }
+        
     }
 }
 
+//Extra code changes Homepage Centerbox text content 
 function handleMediaQueryMax () {
+    let x = document.querySelector('.centerbox');
+    if (x) {
+    document.querySelector('.centertop').innerHTML = 'Discover';
+    document.querySelector('.centerbottomtext').innerHTML = 'Seafra Seafood';
+    document.querySelector('.centerbottomblue').innerHTML = 'Seafra Seafood';
+    }
     generateMobile();
     addButtonEventListeners();
     changeBanner();

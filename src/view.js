@@ -263,10 +263,12 @@ export function setCurrentPage(button) {
     
     //Desktop
     //Sets all buttons to white
+    //Resets button borderBottoms to none
     let menuItems = document.querySelectorAll('.menuitem');
     menuItems.forEach((item) => {
         if (item.firstChild != button) {
             item.firstChild.style.color = 'white';
+            item.firstChild.style.borderBottom = 'none';
         }
     });
 
@@ -278,6 +280,7 @@ export function setCurrentPage(button) {
         dropdownItems.forEach((item) => {
             if (item.firstChild != button) {
                 item.firstChild.style.color = 'black';
+                item.firstChild.style.borderBottom = 'none';
             }
         });
     }
@@ -285,6 +288,7 @@ export function setCurrentPage(button) {
     // Sets currentpage to gold/accent color
         cPage.currentPage = button;
         cPage.currentPage.style.color = 'var(--clr-accent-1)';
+        cPage.currentPage.style.borderBottom = '1px solid var(--clr-accent-1)';
 }
 
 export function setAttributes(el, attrs) {
