@@ -100,7 +100,7 @@ export function generateContactPage() {
 
     let nameLabel = document.createElement('label');
     setAttributes(nameLabel, {'htmlFor': nameInput.id, 'class': 'contactlabel'});
-    nameLabel.innerText = 'Full Name';
+    nameLabel.innerText = 'Full Name:';
 
     //Email
     let emailInput = document.createElement('input');
@@ -108,7 +108,7 @@ export function generateContactPage() {
 
     let emailLabel = document.createElement('label');
     setAttributes(emailLabel, {'htmlFor': emailInput.id, 'class': 'contactlabel'});
-    emailLabel.innerText = 'Email';
+    emailLabel.innerText = 'Email:';
 
     //Message
     let messageInput = document.createElement('textarea');
@@ -116,7 +116,7 @@ export function generateContactPage() {
 
     let messageLabel = document.createElement('label');
     setAttributes(messageLabel, {'htmlFor': messageInput.id, 'class': 'contactlabel'});
-    messageLabel.innerText = 'Enter your message below';
+    messageLabel.innerText = 'Enter your message below:';
 
     //Submit
     let submitButton = document.createElement('button');
