@@ -77,7 +77,6 @@ export function generateContactPage() {
     let emailDiv = document.createElement('div');
     emailDiv.className = 'infodetailsdiv';
 
-
     let seafraEmail = document.createElement('p');
     seafraEmail.className = 'contactinfobox';
     seafraEmail.id = 'seafraemail';
